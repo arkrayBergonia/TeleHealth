@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="PfL-jt-q3u">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724.00000000000023"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffX-Mv-79o">
                                 <rect key="frame" x="0.0" y="88" width="375" height="284"/>
@@ -175,7 +175,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="ns8-Hj-HXi">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724.00000000000023"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cr0-Ts-jsg">
                                 <rect key="frame" x="0.0" y="168" width="375" height="282"/>

@@ -18,6 +18,7 @@
 		1D37361A24161D200087ACAE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361624161D200087ACAE /* LogInViewController.swift */; };
 		1D37361B24161D200087ACAE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361724161D200087ACAE /* WelcomeViewController.swift */; };
 		1D37361C24161D200087ACAE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361824161D200087ACAE /* RegisterViewController.swift */; };
+		5AC4CF599E7C8F263EA8AE64 /* Pods_TeleHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		1D37361624161D200087ACAE /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1D37361724161D200087ACAE /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		1D37361824161D200087ACAE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		749875127DEBC58C089DC1AB /* Pods-TeleHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleHealth.release.xcconfig"; path = "Target Support Files/Pods-TeleHealth/Pods-TeleHealth.release.xcconfig"; sourceTree = "<group>"; };
+		BE9D8304A7BC8E8ABD462476 /* Pods-TeleHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleHealth.debug.xcconfig"; path = "Target Support Files/Pods-TeleHealth/Pods-TeleHealth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC4CF599E7C8F263EA8AE64 /* Pods_TeleHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				1D3735E124161A030087ACAE /* TeleHealth */,
 				1D3735E024161A030087ACAE /* Products */,
+				BA694A877F12658F01F9CF52 /* Pods */,
+				6373827EDFD153BD0146BE25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +129,24 @@
 			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
+		6373827EDFD153BD0146BE25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA694A877F12658F01F9CF52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE9D8304A7BC8E8ABD462476 /* Pods-TeleHealth.debug.xcconfig */,
+				749875127DEBC58C089DC1AB /* Pods-TeleHealth.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D3735F124161A040087ACAE /* Build configuration list for PBXNativeTarget "TeleHealth" */;
 			buildPhases = (
+				F409E105E8AAC18BE83629D1 /* [CP] Check Pods Manifest.lock */,
 				1D3735DB24161A030087ACAE /* Sources */,
 				1D3735DC24161A030087ACAE /* Frameworks */,
 				1D3735DD24161A030087ACAE /* Resources */,
+				CB6C63A44D46751D324B22BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +215,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CB6C63A44D46751D324B22BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleHealth/Pods-TeleHealth-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleHealth/Pods-TeleHealth-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeleHealth/Pods-TeleHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F409E105E8AAC18BE83629D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeleHealth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D3735DB24161A030087ACAE /* Sources */ = {
@@ -336,6 +405,7 @@
 		};
 		1D3735F224161A040087ACAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE9D8304A7BC8E8ABD462476 /* Pods-TeleHealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -354,6 +424,7 @@
 		};
 		1D3735F324161A040087ACAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749875127DEBC58C089DC1AB /* Pods-TeleHealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
