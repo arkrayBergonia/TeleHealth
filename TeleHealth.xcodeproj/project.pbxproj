@@ -15,10 +15,9 @@
 		1D37361324161D150087ACAE /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D37361124161D150087ACAE /* MessageCell.xib */; };
 		1D37361424161D150087ACAE /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361224161D150087ACAE /* CustomMessageCell.swift */; };
 		1D37361924161D200087ACAE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361524161D200087ACAE /* ChatViewController.swift */; };
-		1D37361A24161D200087ACAE /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361624161D200087ACAE /* LogInViewController.swift */; };
 		1D37361B24161D200087ACAE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361724161D200087ACAE /* WelcomeViewController.swift */; };
-		1D37361C24161D200087ACAE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37361824161D200087ACAE /* RegisterViewController.swift */; };
 		1D37361E241629FA0087ACAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D37361D241629FA0087ACAE /* GoogleService-Info.plist */; };
+		1D61E0AF2418B8AB004FD356 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D61E0AD2418B8AA004FD356 /* RoundedButton.swift */; };
 		5AC4CF599E7C8F263EA8AE64 /* Pods_TeleHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +32,9 @@
 		1D37361124161D150087ACAE /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		1D37361224161D150087ACAE /* CustomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
 		1D37361524161D200087ACAE /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		1D37361624161D200087ACAE /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1D37361724161D200087ACAE /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		1D37361824161D200087ACAE /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1D37361D241629FA0087ACAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1D61E0AD2418B8AA004FD356 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		749875127DEBC58C089DC1AB /* Pods-TeleHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleHealth.release.xcconfig"; path = "Target Support Files/Pods-TeleHealth/Pods-TeleHealth.release.xcconfig"; sourceTree = "<group>"; };
 		BE9D8304A7BC8E8ABD462476 /* Pods-TeleHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleHealth.debug.xcconfig"; path = "Target Support Files/Pods-TeleHealth/Pods-TeleHealth.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +95,7 @@
 		1D37360724161C8F0087ACAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1D61E0AD2418B8AA004FD356 /* RoundedButton.swift */,
 				1D37361024161D070087ACAE /* Custom Cell */,
 				1D37360D24161CFF0087ACAE /* Main.storyboard */,
 			);
@@ -107,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				1D37361524161D200087ACAE /* ChatViewController.swift */,
-				1D37361624161D200087ACAE /* LogInViewController.swift */,
-				1D37361824161D200087ACAE /* RegisterViewController.swift */,
 				1D37361724161D200087ACAE /* WelcomeViewController.swift */,
 			);
 			path = Controllers;
@@ -286,10 +283,9 @@
 			files = (
 				1D37361424161D150087ACAE /* CustomMessageCell.swift in Sources */,
 				1D3735E324161A030087ACAE /* AppDelegate.swift in Sources */,
-				1D37361C24161D200087ACAE /* RegisterViewController.swift in Sources */,
+				1D61E0AF2418B8AB004FD356 /* RoundedButton.swift in Sources */,
 				1D37361924161D200087ACAE /* ChatViewController.swift in Sources */,
 				1D37361B24161D200087ACAE /* WelcomeViewController.swift in Sources */,
-				1D37361A24161D200087ACAE /* LogInViewController.swift in Sources */,
 				1D37360B24161CF50087ACAE /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
