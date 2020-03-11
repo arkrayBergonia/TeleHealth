@@ -21,6 +21,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var googleSignInBtn: RoundedButton!
     @IBOutlet weak var registerBtn: RoundedButton!
     @IBOutlet weak var loginBtn: RoundedButton!
+    @IBOutlet weak var cancelBtn: RoundedButton!
     
     
     override func viewDidLoad() {
@@ -48,12 +49,13 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func registerBtnPressed(_ sender: RoundedButton) {
-        
+        self.performSegue(withIdentifier: "goToKYC", sender: self)
     }
     
     @IBAction func loginBtnPressed(_ sender: RoundedButton) {
         self.performSegue(withIdentifier: "goToChat", sender: self)
     }
+    
     
 }
 
