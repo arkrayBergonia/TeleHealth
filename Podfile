@@ -10,5 +10,6 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
+pod 'Firebase/Storage'
 
 end
