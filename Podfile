@@ -10,6 +10,11 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
 pod 'SVProgressHUD'
 pod 'ChameleonFramework'
-pod 'Firebase/Storage'
+pod 'GoogleSignIn'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'MessageKit'
+pod 'Firebase/Firestore'
+pod 'SDWebImage'
 
 end

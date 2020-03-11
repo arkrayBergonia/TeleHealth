@@ -161,6 +161,7 @@
 				1D3735DC24161A030087ACAE /* Frameworks */,
 				1D3735DD24161A030087ACAE /* Resources */,
 				CB6C63A44D46751D324B22BF /* [CP] Embed Pods Frameworks */,
+				16F6811DE1B8757C0D32827F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,6 +221,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16F6811DE1B8757C0D32827F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleHealth/Pods-TeleHealth-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TeleHealth/Pods-TeleHealth-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TeleHealth/Pods-TeleHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CB6C63A44D46751D324B22BF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

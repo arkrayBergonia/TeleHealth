@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //test Firebase Cloud Storage
-        let testDatabase = Storage.storage()
-        let databaseRef = testDatabase.reference()
+//        let testDatabase = Storage.storage()
+//        let databaseRef = testDatabase.reference()
         return true
     }
 
