@@ -22,6 +22,7 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +45,7 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func cancelPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
