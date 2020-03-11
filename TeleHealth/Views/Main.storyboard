@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-sR-rfK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wWy-sR-rfK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="GuT-8W-SsX" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
@@ -29,27 +29,6 @@
                                     <constraint firstAttribute="width" constant="130" id="pvb-hJ-Lqk"/>
                                 </constraints>
                             </imageView>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NDU-rd-LbS" userLabel="Textfield Stack View">
-                                <rect key="frame" x="32" y="301" width="311" height="76"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-ic-qDk">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysp-QT-WSO">
-                                        <rect key="frame" x="0.0" y="42" width="311" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hzW-ro-4L5" userLabel="Button Stack View">
                                 <rect key="frame" x="92" y="577" width="191" height="106"/>
                                 <subviews>
@@ -110,34 +89,27 @@
                         <constraints>
                             <constraint firstItem="GuT-8W-SsX" firstAttribute="top" secondItem="cQy-VU-q98" secondAttribute="bottom" constant="45" id="7sk-zY-FTC"/>
                             <constraint firstAttribute="bottom" secondItem="wWy-sR-rfK" secondAttribute="bottom" id="AAF-By-CMK"/>
-                            <constraint firstItem="NDU-rd-LbS" firstAttribute="leading" secondItem="9g1-SA-C5Y" secondAttribute="leadingMargin" constant="16" id="DGu-pN-43i"/>
-                            <constraint firstItem="NDU-rd-LbS" firstAttribute="top" secondItem="GuT-8W-SsX" secondAttribute="bottom" constant="40" id="JWK-3n-Ik8"/>
                             <constraint firstItem="GuT-8W-SsX" firstAttribute="centerX" secondItem="9g1-SA-C5Y" secondAttribute="centerX" id="MiZ-B4-h5J"/>
                             <constraint firstItem="wWy-sR-rfK" firstAttribute="top" secondItem="9g1-SA-C5Y" secondAttribute="top" id="U9z-6l-1Jl"/>
                             <constraint firstItem="9mT-Oj-xlJ" firstAttribute="top" secondItem="hzW-ro-4L5" secondAttribute="bottom" constant="95" id="VLM-f7-frr"/>
                             <constraint firstItem="hzW-ro-4L5" firstAttribute="centerX" secondItem="9g1-SA-C5Y" secondAttribute="centerX" id="VhO-SS-lR0"/>
                             <constraint firstItem="wWy-sR-rfK" firstAttribute="leading" secondItem="9g1-SA-C5Y" secondAttribute="leading" id="rXD-WZ-eUP"/>
                             <constraint firstAttribute="trailing" secondItem="wWy-sR-rfK" secondAttribute="trailing" id="sXH-1w-woT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="NDU-rd-LbS" secondAttribute="trailing" constant="16" id="xOb-nb-cr3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="qIL-hP-GCy"/>
                     <connections>
                         <outlet property="buttonStack" destination="hzW-ro-4L5" id="ZDi-fr-SbI"/>
-                        <outlet property="emailTextfield" destination="cdc-ic-qDk" id="Iwt-f1-dPC"/>
                         <outlet property="googleSignInBtn" destination="LQy-vh-n28" id="2IS-Xe-cOV"/>
                         <outlet property="iconImage" destination="GuT-8W-SsX" id="avq-Xq-WJ9"/>
                         <outlet property="loginBtn" destination="S8y-y7-oql" id="9fm-an-7bf"/>
-                        <outlet property="passwordTextfield" destination="ysp-QT-WSO" id="NGh-kL-DgS"/>
                         <outlet property="registerBtn" destination="vqN-M6-LDO" id="JXu-jG-Jwh"/>
-                        <outlet property="textfieldStack" destination="NDU-rd-LbS" id="2Ar-ns-FTl"/>
-                        <segue destination="vXZ-lx-hvc" kind="push" identifier="goToChat" id="RuE-fI-2yI"/>
                         <segue destination="xOk-ui-35I" kind="push" identifier="goToKYC" id="p3B-BW-vt2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1I-xB-PqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234.40000000000001" y="10.344827586206897"/>
+            <point key="canvasLocation" x="-450" y="10"/>
         </scene>
         <!--Flash Chat-->
         <scene sceneID="ufC-wZ-h7g">
@@ -151,6 +123,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cA6-SG-jgk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WpY-IA-acB" userLabel="Compose View">
                                 <rect key="frame" x="0.0" y="728" width="375" height="50"/>
                                 <subviews>
@@ -185,7 +161,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7eI-kw-TVm" userLabel="Message Table View">
                                 <rect key="frame" x="0.0" y="88" width="375" height="640"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="jHH-VD-leb">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -194,6 +170,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -226,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="10"/>
+            <point key="canvasLocation" x="1089" y="10"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGX-IT-aXC">
@@ -246,7 +223,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nv2-mt-Fbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-534.39999999999998" y="10.794602698650676"/>
+            <point key="canvasLocation" x="-1230" y="10"/>
         </scene>
         <!--Know Your Customer-->
         <scene sceneID="Svs-ZO-u7f">
@@ -261,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="MWt-QZ-bLS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812.00000000000023"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-yw-YGD" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
                                 <rect key="frame" x="122.66666666666669" y="133" width="130" height="128"/>
@@ -340,7 +317,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="cancelBtnPressed:" destination="xOk-ui-35I" eventType="touchUpInside" id="Oxe-X0-Kgu"/>
-                                                    <action selector="registerBtnPressed:" destination="xOk-ui-35I" eventType="touchUpInside" id="NpK-IK-j1I"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -373,14 +349,16 @@
                         <outlet property="passwordTextfield" destination="iAC-aC-2Ap" id="PNj-Ib-z5U"/>
                         <outlet property="registerBtn" destination="jmd-L4-pQi" id="Rit-aH-T7e"/>
                         <outlet property="textfieldStack" destination="SVz-tw-Eg6" id="djl-80-NqL"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="goToChat" id="NbT-TE-FBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO6-v1-Dp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="791"/>
+            <point key="canvasLocation" x="311" y="10"/>
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="527" height="884"/>
         <image name="background1" width="448" height="778"/>
         <image name="googleSignIn" width="191" height="46"/>
         <image name="iconImage" width="229" height="228"/>

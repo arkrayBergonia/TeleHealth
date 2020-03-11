@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum UserProcess {
+    case Register
+    case Login
+    case GoogleSignin
+}
+
 class KYCViewController: UIViewController {
 
     @IBOutlet weak var iconImage: UIImageView!
@@ -19,10 +25,12 @@ class KYCViewController: UIViewController {
     @IBOutlet weak var loginBtn: RoundedButton!
     @IBOutlet weak var cancelBtn: RoundedButton!
     
+    var userProcess = UserProcess.Login
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.layoutImage()
-        self.userStartProcess(btn: self.loginBtn)
+        self.showHideElements(userProcess: self.userProcess)
     }
     
 
@@ -37,11 +45,11 @@ class KYCViewController: UIViewController {
     }
     
     @IBAction func registerBtnPressed(_ sender: RoundedButton) {
-        
+        self.performSegue(withIdentifier: "goToChat", sender: self)
     }
     
     @IBAction func loginBtnPressed(_ sender: RoundedButton) {
-        //self.performSegue(withIdentifier: "goToChat", sender: self)
+        self.performSegue(withIdentifier: "goToChat", sender: self)
     }
     
     @IBAction func cancelBtnPressed(_ sender: RoundedButton) {
@@ -60,20 +68,9 @@ extension KYCViewController {
         self.iconImage.clipsToBounds = true
     }
     
-    private func showHideElements(btn:UIButton, toHide: Bool) {
-        btn.isHidden = toHide
-        self.cancelBtn.isHidden = !toHide
-        self.textfieldStack.isHidden = !toHide
-        self.emailTextfield.isHidden = !toHide
-        self.passwordTextfield.isHidden = !toHide
-        self.view.layoutIfNeeded()
-    }
-    
-    private func userStartProcess(btn:UIButton) {
-        self.showHideElements(btn: btn, toHide: true)
-    }
-    
-    private func cancelUserProcess(btn:UIButton) {
-        self.showHideElements(btn: btn, toHide: false)
+    private func showHideElements(userProcess: UserProcess) {
+        let btn = userProcess == UserProcess.Register ? self.loginBtn : self.registerBtn
+        btn?.isHidden = true
+        self.cancelBtn.isHidden = false
     }
 }

@@ -23,6 +23,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var loginBtn: RoundedButton!
     @IBOutlet weak var cancelBtn: RoundedButton!
     
+    var selectedProcess = UserProcess.GoogleSignin
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,15 +46,18 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func googleSignInBtnPressed(_ sender: RoundedButton) {
+        self.selectedProcess = UserProcess.GoogleSignin
         GIDSignIn.sharedInstance()?.signIn()
     }
     
     @IBAction func registerBtnPressed(_ sender: RoundedButton) {
+        self.selectedProcess = UserProcess.Register
         self.performSegue(withIdentifier: "goToKYC", sender: self)
     }
     
     @IBAction func loginBtnPressed(_ sender: RoundedButton) {
-        self.performSegue(withIdentifier: "goToChat", sender: self)
+        self.selectedProcess = UserProcess.Login
+        self.performSegue(withIdentifier: "goToKYC", sender: self)
     }
     
     
@@ -70,6 +74,13 @@ extension WelcomeViewController {
         self.iconImage.clipsToBounds = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is KYCViewController {
+            let vc = segue.destination as! KYCViewController
+            vc.userProcess = self.selectedProcess
+        }
+    }
+    
 }
 
 
@@ -78,7 +89,7 @@ extension WelcomeViewController {
                 withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-            self.performSegue(withIdentifier: "goToChat", sender: self)
+           // self.performSegue(withIdentifier: "goToChat", sender: self)
             
             let user: GIDGoogleUser = GIDSignIn.sharedInstance()!.currentUser
             let fullName = user.profile.name
