@@ -8,5 +8,7 @@ target 'TeleHealth' do
   # Pods for TeleHealth
 pod 'Firebase/Analytics'
 pod 'Firebase/Crashlytics'
+pod 'SVProgressHUD'
+pod 'ChameleonFramework'
 
 end
