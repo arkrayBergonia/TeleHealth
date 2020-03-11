@@ -9,7 +9,7 @@
 //
 
 import UIKit
-
+import GoogleSignIn
 
 class RegisterViewController: UIViewController {
 
@@ -22,9 +22,15 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
+        GIDSignIn.sharedInstance()?.presentingViewController = self
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -32,20 +38,25 @@ class RegisterViewController: UIViewController {
 
   
     @IBAction func registerPressed(_ sender: UIButton) {
-        
-
-        
         //TODO: Set up a new user on our Firbase database
-        
-        
-
-        
-        
     } 
     
+    @IBAction func googleSignInPressed(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
     
     @IBAction func cancelPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+ 
+    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
+      withError error: NSError!) {
+        if (error == nil) {
+          // Perform any operations on signed in user here.
+          // ...
+        } else {
+          print("\(error.localizedDescription)")
+        }
     }
     
 }
