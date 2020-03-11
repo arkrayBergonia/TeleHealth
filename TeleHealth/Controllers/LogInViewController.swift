@@ -27,7 +27,7 @@ class LogInViewController: UIViewController {
     }
 
    
-    @IBAction func logInPressed(_ sender: AnyObject) {
+    @IBAction func logInPressed(_ sender: UIButton) {
 
         
         //TODO: Log in the user
@@ -36,6 +36,9 @@ class LogInViewController: UIViewController {
     }
     
 
-
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }  

@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
     
 
   
-    @IBAction func registerPressed(_ sender: AnyObject) {
+    @IBAction func registerPressed(_ sender: UIButton) {
         
 
         
@@ -42,5 +42,9 @@ class RegisterViewController: UIViewController {
         
     } 
     
+    
+    @IBAction func cancelPressed(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
