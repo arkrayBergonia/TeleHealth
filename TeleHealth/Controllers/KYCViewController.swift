@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import SVProgressHUD
 
 enum UserProcess {
     case Register
@@ -31,6 +33,7 @@ class KYCViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.layoutImage()
+        self.setDelegate()
         self.showHideElements(userProcess: self.userProcess)
     }
     
@@ -46,11 +49,40 @@ class KYCViewController: UIViewController {
     }
     
     @IBAction func registerBtnPressed(_ sender: RoundedButton) {
-        self.performSegue(withIdentifier: "goToChat", sender: self)
+        //self.performSegue(withIdentifier: "goToChat", sender: self)
+        if self.userProcess == UserProcess.Register {
+            if checkTextfieldsAreValid() {
+                SVProgressHUD.show()
+
+                Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        print ("Registration Successful!")
+                        SVProgressHUD.dismiss()
+                        self.performSegue(withIdentifier: "goToChat", sender: self)
+                    }
+                })
+            }
+        }
     }
     
     @IBAction func loginBtnPressed(_ sender: RoundedButton) {
-        self.performSegue(withIdentifier: "goToChat", sender: self)
+        //self.performSegue(withIdentifier: "goToChat", sender: self)
+        if self.userProcess == UserProcess.Login {
+            if checkTextfieldsAreValid() {
+                SVProgressHUD.show()
+                Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
+                    if error != nil {
+                        print(error!)
+                    } else {
+                        SVProgressHUD.dismiss()
+                        print("login successful")
+                        self.performSegue(withIdentifier: "goToChat", sender: self)
+                    }
+                })
+            }
+        }
     }
     
     @IBAction func cancelBtnPressed(_ sender: RoundedButton) {
@@ -75,5 +107,61 @@ extension KYCViewController {
         self.fullNameTextfield.isHidden = !registerInProcess
         btn?.isHidden = true
         self.cancelBtn.isHidden = false
+    }
+    
+    private func reusableAlertBox(title: String, message: String) {
+        let action = [UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)]
+        Utilities.showAlert(self, title: title, message: message, animated: true, completion: nil, actions: action)
+    }
+}
+
+
+extension KYCViewController: UITextFieldDelegate {
+    
+    private func setDelegate() {
+        self.fullNameTextfield.delegate = self
+        self.emailTextfield.delegate = self
+        self.passwordTextfield.delegate = self
+        
+        self.fullNameTextfield.inputAccessoryView = self.addDoneBtnViewForKeyboard()
+        self.emailTextfield.inputAccessoryView = self.addDoneBtnViewForKeyboard()
+        self.passwordTextfield.inputAccessoryView = self.addDoneBtnViewForKeyboard()
+    }
+    
+    private func addDoneBtnViewForKeyboard() -> UIButton {
+        let bgColor = userProcess == UserProcess.Register ? UIColor.systemGreen : UIColor.systemBlue
+        let doneBtn = UIButton(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 40))
+        doneBtn.backgroundColor = bgColor
+        doneBtn.setTitle("Done", for: .normal)
+        doneBtn.setTitleColor(UIColor.white, for: .normal)
+        doneBtn.contentHorizontalAlignment = .right
+        doneBtn.autoresizingMask = .flexibleRightMargin
+        doneBtn.addTarget(self, action: #selector(KYCViewController.hideKeyboard), for: .touchUpInside)
+        return doneBtn
+    }
+    
+    @objc func hideKeyboard() {
+        self.fullNameTextfield.resignFirstResponder()
+        self.emailTextfield.resignFirstResponder()
+        self.passwordTextfield.resignFirstResponder()
+    }
+    
+    private func checkTextfieldsAreValid() -> Bool {
+        if self.emailTextfield.text != "" && self.passwordTextfield.text != "" {
+            if self.emailTextfield.text!.isValidEmail() {
+                return true
+            }
+        }
+        return false
+    }
+    
+}
+
+extension String {
+    func isValidEmail() -> Bool {
+        // here, `try!` will always succeed because the pattern is valid
+        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        return regex.firstMatch(in: self, options: [], range: NSRange(location: 0, length: count)) != nil
+
     }
 }

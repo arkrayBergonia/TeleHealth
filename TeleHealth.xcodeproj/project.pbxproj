@@ -19,6 +19,7 @@
 		1D37361E241629FA0087ACAE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D37361D241629FA0087ACAE /* GoogleService-Info.plist */; };
 		1D61E0AF2418B8AB004FD356 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D61E0AD2418B8AA004FD356 /* RoundedButton.swift */; };
 		1D61E0B42418CA9C004FD356 /* KYCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D61E0B32418CA9C004FD356 /* KYCViewController.swift */; };
+		1D951BCE2419C6BA00098AFC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D951BCD2419C6BA00098AFC /* Utilities.swift */; };
 		5AC4CF599E7C8F263EA8AE64 /* Pods_TeleHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		1D37361D241629FA0087ACAE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1D61E0AD2418B8AA004FD356 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		1D61E0B32418CA9C004FD356 /* KYCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCViewController.swift; sourceTree = "<group>"; };
+		1D951BCD2419C6BA00098AFC /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3DF8C8CE82B5C9A5F4AE7321 /* Pods_TeleHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeleHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		749875127DEBC58C089DC1AB /* Pods-TeleHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleHealth.release.xcconfig"; path = "Target Support Files/Pods-TeleHealth/Pods-TeleHealth.release.xcconfig"; sourceTree = "<group>"; };
 		BE9D8304A7BC8E8ABD462476 /* Pods-TeleHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeleHealth.debug.xcconfig"; path = "Target Support Files/Pods-TeleHealth/Pods-TeleHealth.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		1D37360924161CA90087ACAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1D951BCD2419C6BA00098AFC /* Utilities.swift */,
 				1D37361D241629FA0087ACAE /* GoogleService-Info.plist */,
 				1D3735E924161A040087ACAE /* Assets.xcassets */,
 			);
@@ -290,6 +293,7 @@
 				1D61E0AF2418B8AB004FD356 /* RoundedButton.swift in Sources */,
 				1D37361924161D200087ACAE /* ChatViewController.swift in Sources */,
 				1D37361B24161D200087ACAE /* WelcomeViewController.swift in Sources */,
+				1D951BCE2419C6BA00098AFC /* Utilities.swift in Sources */,
 				1D37360B24161CF50087ACAE /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
