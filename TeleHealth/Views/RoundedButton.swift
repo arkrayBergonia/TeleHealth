@@ -17,5 +17,12 @@ class RoundedButton: UIButton {
 
 }
 
+class RoundedTextField: UITextField {
 
+    override func draw(_ rect: CGRect) {
+        self.layer.cornerRadius = 20
+        self.clipsToBounds = true
+    }
+
+}
 

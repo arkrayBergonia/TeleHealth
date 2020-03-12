@@ -19,6 +19,7 @@ class KYCViewController: UIViewController {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var textfieldStack: UIStackView!
     @IBOutlet weak var buttonStack: UIStackView!
+    @IBOutlet weak var fullNameTextfield: RoundedTextField!
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var registerBtn: RoundedButton!
@@ -69,7 +70,9 @@ extension KYCViewController {
     }
     
     private func showHideElements(userProcess: UserProcess) {
-        let btn = userProcess == UserProcess.Register ? self.loginBtn : self.registerBtn
+        let registerInProcess = userProcess == UserProcess.Register
+        let btn = registerInProcess ? self.loginBtn : self.registerBtn
+        self.fullNameTextfield.isHidden = !registerInProcess
         btn?.isHidden = true
         self.cancelBtn.isHidden = false
     }

@@ -31,7 +31,7 @@ class WelcomeViewController: UIViewController {
         self.layoutImage()
         
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.delegate = self as? GIDSignInDelegate
+        GIDSignIn.sharedInstance()?.delegate = self
     
     }
     
@@ -84,12 +84,11 @@ extension WelcomeViewController {
 }
 
 
-extension WelcomeViewController {
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-                withError error: NSError!) {
+extension WelcomeViewController: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-           // self.performSegue(withIdentifier: "goToChat", sender: self)
+           self.performSegue(withIdentifier: "goToChat", sender: self)
             
             let user: GIDGoogleUser = GIDSignIn.sharedInstance()!.currentUser
             let fullName = user.profile.name

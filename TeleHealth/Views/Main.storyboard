@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="GuT-8W-SsX" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
-                                <rect key="frame" x="122.66666666666669" y="133" width="130" height="128"/>
+                                <rect key="frame" x="122.66666666666669" y="148" width="130" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Zdo-YB-2hc"/>
                                     <constraint firstAttribute="width" constant="130" id="pvb-hJ-Lqk"/>
@@ -87,7 +87,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GuT-8W-SsX" firstAttribute="top" secondItem="cQy-VU-q98" secondAttribute="bottom" constant="45" id="7sk-zY-FTC"/>
+                            <constraint firstItem="GuT-8W-SsX" firstAttribute="top" secondItem="cQy-VU-q98" secondAttribute="bottom" constant="60" id="7sk-zY-FTC"/>
                             <constraint firstAttribute="bottom" secondItem="wWy-sR-rfK" secondAttribute="bottom" id="AAF-By-CMK"/>
                             <constraint firstItem="GuT-8W-SsX" firstAttribute="centerX" secondItem="9g1-SA-C5Y" secondAttribute="centerX" id="MiZ-B4-h5J"/>
                             <constraint firstItem="wWy-sR-rfK" firstAttribute="top" secondItem="9g1-SA-C5Y" secondAttribute="top" id="U9z-6l-1Jl"/>
@@ -105,11 +105,12 @@
                         <outlet property="loginBtn" destination="S8y-y7-oql" id="9fm-an-7bf"/>
                         <outlet property="registerBtn" destination="vqN-M6-LDO" id="JXu-jG-Jwh"/>
                         <segue destination="xOk-ui-35I" kind="push" identifier="goToKYC" id="p3B-BW-vt2"/>
+                        <segue destination="vXZ-lx-hvc" kind="push" identifier="goToChat" id="FOQ-dh-0MA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1I-xB-PqX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-450" y="10"/>
+            <point key="canvasLocation" x="12" y="-328"/>
         </scene>
         <!--Flash Chat-->
         <scene sceneID="ufC-wZ-h7g">
@@ -203,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="10"/>
+            <point key="canvasLocation" x="970" y="-328"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGX-IT-aXC">
@@ -223,7 +224,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nv2-mt-Fbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1230" y="10"/>
+            <point key="canvasLocation" x="-862" y="-328"/>
         </scene>
         <!--Know Your Customer-->
         <scene sceneID="Svs-ZO-u7f">
@@ -241,16 +242,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812.00000000000023"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-yw-YGD" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
-                                <rect key="frame" x="122.66666666666669" y="133" width="130" height="128"/>
+                                <rect key="frame" x="122.66666666666669" y="148" width="130" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Eeh-Sd-k20"/>
                                     <constraint firstAttribute="height" constant="128" id="VWr-nv-ceW"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-tw-Eg6" userLabel="Textfield Stack View">
-                                <rect key="frame" x="32" y="301" width="311" height="76"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SVz-tw-Eg6" userLabel="Textfield Stack View">
+                                <rect key="frame" x="32" y="316" width="311" height="126"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flR-zp-5Qm">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0CZ-g7-Uc4" customClass="RoundedTextField" customModule="TeleHealth" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -258,8 +259,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAC-aC-2Ap">
-                                        <rect key="frame" x="0.0" y="42" width="311" height="34"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flR-zp-5Qm" customClass="RoundedTextField" customModule="TeleHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="46" width="311" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iAC-aC-2Ap" customClass="RoundedTextField" customModule="TeleHealth" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="311" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -327,7 +336,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ki1-yw-YGD" firstAttribute="centerX" secondItem="krF-jS-bxc" secondAttribute="centerX" id="2XF-oh-Kvk"/>
-                            <constraint firstItem="ki1-yw-YGD" firstAttribute="top" secondItem="iUX-10-Fpu" secondAttribute="bottom" constant="45" id="4S9-Cl-ksO"/>
+                            <constraint firstItem="ki1-yw-YGD" firstAttribute="top" secondItem="iUX-10-Fpu" secondAttribute="bottom" constant="60" id="4S9-Cl-ksO"/>
                             <constraint firstItem="i8N-p7-tii" firstAttribute="top" secondItem="wpL-ZX-VJt" secondAttribute="bottom" constant="95" id="8tX-wP-fd9"/>
                             <constraint firstItem="SVz-tw-Eg6" firstAttribute="top" secondItem="ki1-yw-YGD" secondAttribute="bottom" constant="40" id="DPa-CU-kdh"/>
                             <constraint firstItem="MWt-QZ-bLS" firstAttribute="top" secondItem="krF-jS-bxc" secondAttribute="top" id="E1n-DP-zRH"/>
@@ -344,6 +353,7 @@
                         <outlet property="buttonStack" destination="wpL-ZX-VJt" id="AGB-vh-Eut"/>
                         <outlet property="cancelBtn" destination="Zz4-mH-J1B" id="DLc-Sm-DOj"/>
                         <outlet property="emailTextfield" destination="flR-zp-5Qm" id="hl1-Db-kEa"/>
+                        <outlet property="fullNameTextfield" destination="0CZ-g7-Uc4" id="Lc1-hW-1Mm"/>
                         <outlet property="iconImage" destination="ki1-yw-YGD" id="TVX-0b-b42"/>
                         <outlet property="loginBtn" destination="Tma-gn-zXk" id="JhN-47-sXw"/>
                         <outlet property="passwordTextfield" destination="iAC-aC-2Ap" id="PNj-Ib-z5U"/>
@@ -354,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CO6-v1-Dp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="10"/>
+            <point key="canvasLocation" x="12" y="382"/>
         </scene>
     </scenes>
     <resources>
@@ -363,4 +373,7 @@
         <image name="googleSignIn" width="191" height="46"/>
         <image name="iconImage" width="229" height="228"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NbT-TE-FBf"/>
+    </inferredMetricsTieBreakers>
 </document>

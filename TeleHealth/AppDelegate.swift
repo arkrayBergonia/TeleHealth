@@ -17,26 +17,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // set Firebase
         FirebaseApp.configure()
         
         //set Google SignIn Feature
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        
-        //test Firebase Cloud Storage
-//        let testDatabase = Storage.storage()
-//        let databaseRef = testDatabase.reference()
         return true
     }
     
-    // use URL set for Google Sign In
-    @available(iOS 9.0, *)
+    // use URL set for Google SignIn
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         let handled = GIDSignIn.sharedInstance().handle(url)
         return handled
-        // return GIDSignIn.sharedInstance().handle(url,
-        // sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-        // annotation: [:])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
