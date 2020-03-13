@@ -120,6 +120,8 @@ extension KYCViewController {
         if self.userProcess == UserProcess.Register {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bottomActionSheetPressed))
             self.iconImage.addGestureRecognizer(tapGesture)
+        } else {
+            self.iconImage.image = UIImage(named: "iconImage")
         }
     }
 }
