@@ -30,14 +30,13 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hzW-ro-4L5" userLabel="Button Stack View">
-                                <rect key="frame" x="92" y="577" width="191" height="106"/>
+                                <rect key="frame" x="49" y="567" width="277" height="116"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQy-vh-n28" customClass="RoundedButton" customModule="TeleHealth" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="191" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="191" id="WjP-F4-qwZ"/>
-                                            <constraint firstAttribute="height" constant="45" id="rUB-QN-iUS"/>
+                                            <constraint firstAttribute="height" constant="50" id="rUB-QN-iUS"/>
                                         </constraints>
                                         <state key="normal" image="googleSignIn">
                                             <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,15 +46,15 @@
                                             <action selector="googleSignInBtnPressed:" destination="w26-XG-9cC" eventType="touchUpInside" id="WDk-uB-dRO"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-3C-tyS">
-                                        <rect key="frame" x="0.0" y="61" width="191" height="45"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qfl-3C-tyS">
+                                        <rect key="frame" x="0.0" y="66" width="277" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqN-M6-LDO" customClass="RoundedButton" customModule="TeleHealth" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                                                 <color key="backgroundColor" red="0.1450980392" green="0.63529411759999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="87" id="1h3-eZ-Ogb"/>
-                                                    <constraint firstAttribute="height" constant="45" id="Ob5-0D-1g0"/>
+                                                    <constraint firstAttribute="width" constant="130" id="1h3-eZ-Ogb"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Ob5-0D-1g0"/>
                                                 </constraints>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,11 +65,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8y-y7-oql" customClass="RoundedButton" customModule="TeleHealth" customModuleProvider="target">
-                                                <rect key="frame" x="104" y="0.0" width="87" height="45"/>
+                                                <rect key="frame" x="147" y="0.0" width="130" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.46014550050000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="nnf-tE-heE"/>
-                                                    <constraint firstAttribute="width" constant="87" id="p4Z-1n-k3B"/>
+                                                    <constraint firstAttribute="height" constant="50" id="nnf-tE-heE"/>
+                                                    <constraint firstAttribute="width" constant="130" id="p4Z-1n-k3B"/>
                                                 </constraints>
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -241,7 +240,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="MWt-QZ-bLS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812.00000000000023"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-yw-YGD" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-yw-YGD" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
                                 <rect key="frame" x="122.66666666666669" y="148" width="130" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="Eeh-Sd-k20"/>
@@ -278,17 +277,17 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wpL-ZX-VJt" userLabel="Button Stack View">
-                                <rect key="frame" x="92" y="638" width="191" height="45"/>
+                                <rect key="frame" x="49" y="633" width="277" height="50"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-cj-nR1">
-                                        <rect key="frame" x="0.0" y="0.0" width="191" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-L4-pQi" customClass="RoundedButton" customModule="TeleHealth" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="45"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="130" height="50"/>
                                                 <color key="backgroundColor" red="0.1450980392" green="0.63529411759999999" blue="0.30588235289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="L3r-b1-Xvx"/>
-                                                    <constraint firstAttribute="width" constant="87" id="QQK-He-2qN"/>
+                                                    <constraint firstAttribute="height" constant="50" id="L3r-b1-Xvx"/>
+                                                    <constraint firstAttribute="width" constant="130" id="QQK-He-2qN"/>
                                                 </constraints>
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -299,11 +298,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tma-gn-zXk" customClass="RoundedButton" customModule="TeleHealth" customModuleProvider="target">
-                                                <rect key="frame" x="104" y="0.0" width="87" height="45"/>
+                                                <rect key="frame" x="147" y="0.0" width="130" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.46014550050000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="6fo-hy-W0r"/>
-                                                    <constraint firstAttribute="width" constant="87" id="j1h-N2-kIa"/>
+                                                    <constraint firstAttribute="height" constant="50" id="6fo-hy-W0r"/>
+                                                    <constraint firstAttribute="width" constant="130" id="j1h-N2-kIa"/>
                                                 </constraints>
                                                 <state key="normal" title="Log In">
                                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -314,11 +313,11 @@
                                                 </connections>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zz4-mH-J1B" customClass="RoundedButton" customModule="TeleHealth" customModuleProvider="target">
-                                                <rect key="frame" x="191" y="0.0" width="87" height="45"/>
+                                                <rect key="frame" x="277" y="0.0" width="130" height="50"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Tyh-vo-JnP"/>
-                                                    <constraint firstAttribute="width" constant="87" id="XBb-QB-GOx"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Tyh-vo-JnP"/>
+                                                    <constraint firstAttribute="width" constant="130" id="XBb-QB-GOx"/>
                                                 </constraints>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -371,10 +370,11 @@
     <resources>
         <image name="background" width="527" height="884"/>
         <image name="background1" width="448" height="778"/>
+        <image name="defaultAvatar" width="123" height="123"/>
         <image name="googleSignIn" width="191" height="46"/>
         <image name="iconImage" width="229" height="228"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NbT-TE-FBf"/>
+        <segue reference="FOQ-dh-0MA"/>
     </inferredMetricsTieBreakers>
 </document>

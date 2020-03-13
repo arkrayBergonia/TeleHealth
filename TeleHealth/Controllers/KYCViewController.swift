@@ -36,6 +36,7 @@ class KYCViewController: UIViewController {
         self.layoutImage()
         self.setDelegate()
         self.showHideElements(userProcess: self.userProcess)
+        self.addImageEditor()
     }
     
 
@@ -114,6 +115,13 @@ extension KYCViewController {
         let action = [UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)]
         Utilities.showAlert(self, title: title, message: message, animated: true, completion: nil, actions: action)
     }
+    
+    private func addImageEditor() {
+        if self.userProcess == UserProcess.Register {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(bottomActionSheetPressed))
+            self.iconImage.addGestureRecognizer(tapGesture)
+        }
+    }
 }
 
 
@@ -171,19 +179,69 @@ extension KYCViewController: UITextFieldDelegate {
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            self.iconTopConstraint.constant = -self.iconImage.frame.size.height
-            self.view.layoutIfNeeded()
+        if self.userProcess == UserProcess.Register {
+            UIView.animate(withDuration: 0.5) {
+                self.iconTopConstraint.constant = -self.iconImage.frame.size.height
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UIView.animate(withDuration: 0.5) {
-            self.iconTopConstraint.constant = 60
-            self.view.layoutIfNeeded()
+        if self.userProcess == UserProcess.Register {
+            UIView.animate(withDuration: 0.5) {
+                self.iconTopConstraint.constant = 60
+                self.view.layoutIfNeeded()
+            }
         }
     }
     
+}
+
+extension KYCViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    //PhotoLibrary Functions
+    private func selectFromGallery() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.delegate = self
+            present(imagePickerController, animated: true, completion: nil)
+        }
+    }
+    
+    //Camera Functions
+    private func getAnImage() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let cameraImagePickerController = UIImagePickerController()
+            cameraImagePickerController.sourceType = .camera
+            cameraImagePickerController.delegate = self
+            present(cameraImagePickerController, animated: true, completion: nil)
+        }
+    }
+    
+    // PhotoLibrary Functions
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.iconImage.contentMode = .scaleAspectFill
+            self.iconImage.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    //Bottom ActionSheet
+    @objc func bottomActionSheetPressed() {
+        let alert = UIAlertController(title: "Select an image for your profile", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Select from Gallery", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.selectFromGallery()}))
+        alert.addAction(UIAlertAction(title: "Capture an image", style: .default, handler: { (alert:UIAlertAction!) -> Void in
+            self.getAnImage()}))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension String {
