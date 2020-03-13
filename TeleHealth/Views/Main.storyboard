@@ -239,7 +239,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="MWt-QZ-bLS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812.00000000000023"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconImage" translatesAutoresizingMaskIntoConstraints="NO" id="ki1-yw-YGD" customClass="RoundedImage" customModule="TeleHealth" customModuleProvider="target">
                                 <rect key="frame" x="122.66666666666669" y="148" width="130" height="128"/>
@@ -355,6 +355,7 @@
                         <outlet property="emailTextfield" destination="flR-zp-5Qm" id="hl1-Db-kEa"/>
                         <outlet property="fullNameTextfield" destination="0CZ-g7-Uc4" id="Lc1-hW-1Mm"/>
                         <outlet property="iconImage" destination="ki1-yw-YGD" id="TVX-0b-b42"/>
+                        <outlet property="iconTopConstraint" destination="4S9-Cl-ksO" id="zkd-dw-zOm"/>
                         <outlet property="loginBtn" destination="Tma-gn-zXk" id="JhN-47-sXw"/>
                         <outlet property="passwordTextfield" destination="iAC-aC-2Ap" id="PNj-Ib-z5U"/>
                         <outlet property="registerBtn" destination="jmd-L4-pQi" id="Rit-aH-T7e"/>

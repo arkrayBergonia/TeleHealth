@@ -19,6 +19,7 @@ enum UserProcess {
 class KYCViewController: UIViewController {
 
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var iconTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var textfieldStack: UIStackView!
     @IBOutlet weak var buttonStack: UIStackView!
     @IBOutlet weak var fullNameTextfield: RoundedTextField!
@@ -153,6 +154,34 @@ extension KYCViewController: UITextFieldDelegate {
             }
         }
         return false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case self.fullNameTextfield:
+            self.emailTextfield.becomeFirstResponder()
+        case self.emailTextfield:
+            self.passwordTextfield.becomeFirstResponder()
+        case self.passwordTextfield:
+            self.passwordTextfield.resignFirstResponder()
+        default:
+            textField.resignFirstResponder()
+        }
+        return false
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5) {
+            self.iconTopConstraint.constant = -self.iconImage.frame.size.height
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5) {
+            self.iconTopConstraint.constant = 60
+            self.view.layoutIfNeeded()
+        }
     }
     
 }
