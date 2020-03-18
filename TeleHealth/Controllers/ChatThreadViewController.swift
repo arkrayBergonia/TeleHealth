@@ -27,10 +27,33 @@ var currentUser: User = Auth.auth().currentUser!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = user2Name ?? "Chat"
+        
+        maintainPositionOnKeyboardFrameChanged = true
+        messageInputBar.inputTextView.tintColor = .darkText
+        messageInputBar.sendButton.setTitleColor(.darkText, for: .normal)
+        
+        messageInputBar.delegate = self
+        messagesCollectionView.messagesDataSource = self
+        messagesCollectionView.messagesLayoutDelegate = self
+        messagesCollectionView.messagesDisplayDelegate = self
     }
     
 }
 
+
+extension ChatThreadViewController: InputBarAccessoryViewDelegate {
+    // MARK: - InputBarAccessoryViewDelegate
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        let message = Messages(id: UUID().uuidString, content: text, created: Timestamp(), senderID: currentUser.uid, senderName: currentUser.displayName!)
+        //messages.append(message)
+        insertNewMessage(message)
+        save(message)
+        
+        inputBar.inputTextView.text = ""
+        messagesCollectionView.reloadData()
+        messagesCollectionView.scrollToBottom(animated: true)
+    }
+}
 
 extension ChatThreadViewController: MessagesDataSource {
     // MARK: - MessagesDataSource
